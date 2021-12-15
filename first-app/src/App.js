@@ -1,6 +1,7 @@
-import Expense from "./components/Expense";
+import Expense from "./components/Expenses/Expense";
 
-function App() {
+// = function() {}
+const App = () => {
   // if in regular javascript
   // const para = document.createElement('p');
   // para.textContent = 'This is also visible';
