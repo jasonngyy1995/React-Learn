@@ -1,4 +1,5 @@
 import Expense from "./components/Expenses/Expense";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 // = function() {}
 const App = () => {
@@ -29,10 +30,18 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = expense => {
+    console.log('In app.js');
+    console.log(expense);
+  }
+
   return (
-    // create the key of props as "items", to be called in other components
-    <Expense items={expenses}></Expense>
+    <div>
+      <NewExpense onAddExpense={addExpenseHandler}/>
+      {/*create the key of props as "items", to be called in other components*/}
+      <Expense items={expenses}></Expense>
+    </div>
   );
-}
+};
 
 export default App;

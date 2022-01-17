@@ -4,7 +4,7 @@ import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 
-// * props -> pass data between components
+// * props -> pass data between components (only from PARENT to CHILD component)
 const ExpenseItem = (props) => {
   
   // useState() can't be called in a nested function
