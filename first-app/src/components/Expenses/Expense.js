@@ -9,7 +9,6 @@ const Expense = (props) => {
   const [selectedYear, setYear] = useState("2020");
 
   const saveSelectedYear = (year) => {
-    console.log(year);
     setYear(year);
   }
 
@@ -17,7 +16,9 @@ const Expense = (props) => {
     <div>
       <Card className="expenses">
         <ExpenseFilter selected={selectedYear} onSaveSelectedYear={saveSelectedYear}/>
-        {props.items.map(expense => <ExpenseItem
+        {props.items.map((expense) => <ExpenseItem
+          // should always add a key when mapping out a list, so React can uniquely identify all items and aware which item needed to be replaced
+          key={expense.id}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
